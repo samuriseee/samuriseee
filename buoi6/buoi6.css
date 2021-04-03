@@ -2,6 +2,12 @@ body {
     background-color: #2f3238;
     font-family: 'Abel', sans-serif;
 }
+.container {
+    height: 750px;
+    width: 750px;
+    align-items: center;
+    margin-left:10%;
+}
 .name-border {
     width: 750px;
     height:95px;
