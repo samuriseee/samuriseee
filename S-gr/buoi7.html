@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../S-gr/buoi7.js">
+    </script>
     <title>javascript</title>
     <style>
     body {
@@ -21,131 +23,6 @@
         padding:2%;
     }
     </style>
-    <!-- js bài 1-->
-    <script>
-        function bai1() {
-            let today=new Date ();
-            document.getElementById("bai1").innerHTML=today;
-        } 
-        </script>
-    
-         <!-- js bài 2-->
-        <script> 
-          function bai2() {
-            let today = new Date();
-            let dd = String(today.getDate());
-                if (dd < 10 ) {
-                    dd = '0' + dd;
-                }
-            let mm = String(today.getMonth() + 1);
-                if (mm < 10) {
-                    mm = '0' + mm;
-                }
-            let yyyy = today.getFullYear();
-    
-            today = mm + '-' + dd + '-' + yyyy;
-            
-            let today1 = mm + '/' + dd + '/' + yyyy;
-           
-            let today2 = dd + '-' + mm + '-' + yyyy;
-            
-            let today3 = dd + '/' + mm + '/' + yyyy;
-            let output = today1 + '</br>'  + today2 + '</br>' + today3 + '</br>' + today
-            document.getElementById("bai2").innerHTML= output;
-           
-           
-          }
-        </script>
-    
-         <!-- js bài 3-->
-        <script> 
-           function bai3() {
-                let n;
-                let mang = new Array();
-                mang = document.getElementById("Num").value;
-                for (let i=0; i < n-1; i++) {
-                   if (a[i] > a[i+1]) {
-                   return false;
-                   document.getElementById("sai").innerHTML= mang;
-                   }
-               }
-                    return true;
-                    document.getElementById("dung").innerHTML= mang;
-           }
-        </script>
-        <!-- Js bài 4 -->
-        <script> 
-           function bai4() {
-            let input = document.getElementById("bai4-input").value;
-            let characters = Array.from(input);
-            for(let i = 0; i < characters.length; i++) {
-                characters[i] = String.fromCharCode(characters[i].charCodeAt(0) + 1);
-            }
-            document.getElementById('result4').innerHTML=(characters.join(""));
-        }
-        </script>
-        <!-- js bài 8 -->
-        <script> 
-          function bai8 () {
-              let Month = document.getElementById("Month").value;
-              
-              switch (Month) {
-                  case "1": text="tháng một";
-                  break;
-                  case "2": text="tháng high";
-                  break;
-                  case "3": text="tháng ba";
-                  break;
-                  case "4": text="tháng tư";
-                  break;
-                  case "5": text="tháng năm";
-                  break;
-                  case "6": text="tháng sáu";
-                  break;
-                  case "7": text="tháng seven";
-                  break;
-                  case "8": text="tháng eight";
-                  break;
-                  case "9": text="tháng nine";
-                  break;
-                  case "10": text="tháng một không";
-                  break;
-                  case "11": text="tháng một một ";
-                  break;
-                  case "12": text="tháng một hai";
-                  break;
-                  default:
-                  text = "the result is nothing";
-              }
-              document.getElementById("demo").innerHTML = text;
-          }
-        </script>
-
-        <!-- Js bài 7 -->
-        <script>
-           
-            function bai7() {
-            let str = document.getElementById("str").value;
-            let n = str.includes("java");
-            document.getElementById("result").innerHTML = n;
-            }
-        </script>
-        <!-- Js bài 9 -->
-        <script> 
-        function bai9() {
-            debugger
-            let str = document.getElementById("str2").value;
-            let words = str.split(' ');
-            let maxLength = 0;
-            for ( let i=0; i < words.Length; i++ ) {
-                if (words[i].length > maxLength) {
-                    maxLength = words[i].length;
-                }
-            }
-            
-            document.getElementById("result2").innerHTML=words[maxLength];
-        }
-        </script>
 </head>
 <body>
     <div class="container">
@@ -172,8 +49,8 @@
     <!-- HTML bài 4 -->
     <div> 
         Bài 4
-        <input id="bai4-input">
-        <button onclick="bai4()"> Click me </button> 
+        <input id="bai4-input" placeholder="Ma Thuật">
+        <button onclick="bai4()"> Enter </button> 
         <p  id="result4"></p>  
     </div>
     <div> 
@@ -192,7 +69,7 @@
     <!-- HTML bài 9 -->
     <div> 
         Bài 9 
-        <input id="str2" placholder="Nhập chuỗi">
+        <input id="str2" placeholder="Nhập chuỗi">
         <button onclick="bai9()"> Enter </button>
         <p id="result2"></p>
     </div>
