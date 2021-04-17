@@ -1,0 +1,116 @@
+body {
+    background-color: #37393B;
+    font-family: 'Ubuntu', sans-serif;
+}
+.container {
+    width: 80%;
+    height: 125px;
+    border: 0.5px solid #273B5B;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: #273B5B;
+    padding: 2%;
+    margin-left: 7%;
+    border-radius: 12px;
+    font-size:18px;
+    color:#AF975D;
+}
+input {
+    display:flex;
+    width:70%;
+    height:30%;
+    border-radius: 5px;
+}
+#Category {
+    width:70%;
+    height:35%;
+    padding:5px;
+    border-radius: 5px;
+    
+}
+.previewimg {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    
+    border: 1px solid black;
+}
+ button {
+     width:70px;
+     height:40px;
+     padding:5px;
+     margin-left:20px;
+     border-radius: 5px;
+ }
+.three-button {
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+.submit {
+    background-color: #37393B;
+    color: #AF975D;
+    cursor: pointer;
+}
+.edit {
+    background-color: #AF975D;
+    color:#273B5B;
+    cursor: pointer;
+}
+.delete {
+    background-color: #672F3C;
+    color: #AF975D;
+    cursor: pointer;
+}
+ table {
+    width: 84%;
+    height: 40%;
+    justify-content: center;
+    margin-left: 7%;
+    margin-top: 2%;
+    background-color: #273B5B;
+    color:#AF975D;
+    font-size:20px;
+    
+ }
+ table img {
+     width:70%;
+     height:auto;
+     object-fit: cover;
+     
+     
+ }
+ table thead {
+    text-align: left;
+    
+ }
+ 
+ table tr {
+    transition: background-color 0.7s ease-in-out;
+    cursor: pointer;
+ }
+ table tr:hover {
+    background-color: #672F3C;
+    color: #AF975D;
+ }
+ table th {
+     padding: 5px;
+     font-size: 20px;
+     background-color: #AF975D;
+     color:#273B5B;
+     
+ }
+ h1 {
+     text-align: center;
+     font-size:38px;
+     color:#AF975D;
+     font-family: 'Roboto Mono', monospace;
+     letter-spacing: 3px;
+     text-transform: uppercase;
+ }
+ #invalid,#invalid2 {
+     font-size: 15px;
+     margin-top:-0.2px;
+     color: #ce113d;
+     font-weight: bolder;
+ }
