@@ -5,7 +5,7 @@ body {
 .container {
     width: 80%;
     height: 125px;
-    border: 0.5px solid black;
+    border: 0.5px solid #273B5B;
     justify-content: space-evenly;
     display: flex;
     background-color: #273B5B;
@@ -17,7 +17,7 @@ body {
 }
 input {
     display:flex;
-    width:60%;
+    width:70%;
     height:30%;
     border-radius: 5px;
 }
@@ -36,7 +36,7 @@ input {
     border: 1px solid black;
 }
  button {
-     width:60px;
+     width:70px;
      height:40px;
      padding:5px;
      margin-left:20px;
@@ -45,18 +45,22 @@ input {
 .three-button {
     display:flex;
     justify-content: space-evenly;
+    
 }
 .submit {
     background-color: #37393B;
     color: #AF975D;
+    cursor: pointer;
 }
 .edit {
     background-color: #AF975D;
     color:#273B5B;
+    cursor: pointer;
 }
 .delete {
     background-color: #672F3C;
     color: #AF975D;
+    cursor: pointer;
 }
  table {
     width: 84%;
@@ -68,14 +72,22 @@ input {
     color:#AF975D;
     font-size:20px;
     
-    
+ }
+ table img {
+     width:70%;
+     height:auto;
+     object-fit: cover;
+     
+     
  }
  table thead {
     text-align: left;
- }
- table tr {
-    transition: background-color 1s ease-in-out;
     
+ }
+ 
+ table tr {
+    transition: background-color 0.7s ease-in-out;
+    cursor: pointer;
  }
  table tr:hover {
     background-color: #672F3C;
@@ -90,7 +102,7 @@ input {
  }
  h1 {
      text-align: center;
-     font-size:37px;
+     font-size:38px;
      color:#AF975D;
      font-family: 'Roboto Mono', monospace;
      letter-spacing: 3px;
@@ -99,6 +111,6 @@ input {
  #invalid,#invalid2 {
      font-size: 15px;
      margin-top:-0.2px;
-     color: #b11036;
+     color: #ce113d;
      font-weight: bolder;
  }

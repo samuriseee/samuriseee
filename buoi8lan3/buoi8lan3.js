@@ -1,8 +1,11 @@
 //add Row
 var rIndex,table = document.getElementById("table");
-var reader=""
+var reader="";
+var rowCount= 0;
 function checkInput(){
-name = document.getElementById("itemName").value;
+let name = document.getElementById("itemName").value;
+
+
 //check name
 if(name.length >= 10 || Number(name[0])) {
             document.getElementById("invalid").innerHTML="Name is invalid";
@@ -25,6 +28,8 @@ function readURL(input) {
     if (input.files && input.files[0]) {
     reader = new FileReader();
     reader.onload = function (e) {
+        const lastImgString = reader.result.replace("data:", "").replace(/^.+,/, "");
+        localStorage.setItem("lastImg", lastImgString);
         img.src=e.target.result;
         img.width=200;
         img.height=150;
@@ -34,12 +39,13 @@ function readURL(input) {
 }
 
 function addHTMLTableRow(){
-if (checkInput()) {
+    if (checkInput()) {
         const item = {
         _name : name,
         _category   : category,
         _img : reader.result
-        }
+        };
+        window.rowCount++;
         let table = document.getElementById("table"),
             newRow=table.insertRow(table.length),
             cell0=newRow.insertCell(0)
@@ -48,16 +54,23 @@ if (checkInput()) {
             cell3=newRow.insertCell(3);
             name = document.getElementById("itemName").value;
             category = document.getElementById("Category").value;
-
-            cell0.innerHTML= "#";
+        
+            cell0.innerHTML= rowCount;
             cell1.innerHTML= name;
             cell2.innerHTML= category;
+            
             cell3.innerHTML= `
-                <img id="idimg" src="" alt=" "> 
+            
+                <img id=${"idimg" + rowCount} src="" alt=" "> 
             `;
+   
 
+
+            let img = document.getElementById("idimg" + rowCount);
+            img.setAttribute("src", "data:image/png;base64," + localStorage.getItem("lastImg"));
+            
             selectedRowToInput();
-}
+    }
 }
 function selectedRowToInput()
     {
@@ -66,7 +79,7 @@ function selectedRowToInput()
         {
             table.rows[i].onclick = function()
             {
-              console.log(rIndex);
+             
               rIndex = this.rowIndex;
               
               document.getElementById("itemName").value = this.cells[1].innerHTML;
@@ -83,10 +96,19 @@ function editHtmlTbleSelectedRow()
             category = document.getElementById("Category").value;
             
        
-            table.rows[rIndex].cells[0].innerHTML = "#";
+            table.rows[rIndex].cells[0].innerHTML = rowCount;
             table.rows[rIndex].cells[1].innerHTML = name;
             table.rows[rIndex].cells[2].innerHTML = category;
-            table.rows[rIndex].cells[3].innerHTML = readURL(input);
+            table.rows[rIndex].cells[3].innerHTML = `  
+                <img id="idimg3" src="" alt=" "> 
+            `;
+
+
+
+            let img = document.getElementById("idimg3");
+            img.setAttribute("src", "data:image/png;base64," + localStorage.getItem("lastImg"));
+            
+            selectedRowToInput();
       
     }
 function removeSelectedRow() {
