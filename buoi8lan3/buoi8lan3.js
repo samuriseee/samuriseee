@@ -40,11 +40,6 @@ function readURL(input) {
 
 function addHTMLTableRow(){
     if (checkInput()) {
-        const item = {
-        _name : name,
-        _category   : category,
-        _img : reader.result
-        };
         window.rowCount++;
         let table = document.getElementById("table"),
             newRow=table.insertRow(table.length),
@@ -90,8 +85,8 @@ function selectedRowToInput()
     }
     selectedRowToInput();
 
-function editHtmlTbleSelectedRow()
-    {
+function editHtmlTbleSelectedRow() {   
+    if (checkInput()) {
         let name = document.getElementById("itemName").value,
             category = document.getElementById("Category").value;
             
@@ -102,18 +97,20 @@ function editHtmlTbleSelectedRow()
             table.rows[rIndex].cells[3].innerHTML = `  
                 <img id="idimg3" src="" alt=" "> 
             `;
-
+           
 
 
             let img = document.getElementById("idimg3");
             img.setAttribute("src", "data:image/png;base64," + localStorage.getItem("lastImg"));
-            
+    }
             selectedRowToInput();
       
     }
 function removeSelectedRow() {
+    
             table.deleteRow(rIndex);
             document.getElementById("itemName").value="";
             document.getElementById("Category").value="";
             document.getElementById("idimg").value="";
+    }
 }
