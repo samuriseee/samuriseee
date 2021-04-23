@@ -14,7 +14,12 @@ body {
     border-radius: 12px;
     font-size:18px;
     color:#AF975D;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    
 }
+
 input {
     display:flex;
     width:70%;
@@ -45,6 +50,7 @@ input {
 .three-button {
     display:flex;
     justify-content: space-evenly;
+    
     
 }
 .submit {
@@ -107,6 +113,7 @@ input {
      font-family: 'Roboto Mono', monospace;
      letter-spacing: 3px;
      text-transform: uppercase;
+     
  }
  #invalid,#invalid2 {
      font-size: 15px;

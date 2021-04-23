@@ -45,6 +45,9 @@ function addHTMLTableRow(){
         _category   : category,
         _img : reader.result
         };
+        localStorage.setItem('item', JSON.stringify(item) )
+        
+        
         window.rowCount++;
         let table = document.getElementById("table"),
             newRow=table.insertRow(table.length),
@@ -65,7 +68,7 @@ function addHTMLTableRow(){
             `;
    
 
-
+            
             let img = document.getElementById("idimg" + rowCount);
             img.setAttribute("src", "data:image/png;base64," + localStorage.getItem("lastImg"));
             
