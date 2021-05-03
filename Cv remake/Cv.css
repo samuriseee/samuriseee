@@ -429,51 +429,6 @@ ul li a {
     transition: 0.5s;
     transform: scale(1);
 }
-.magicwave {
-    postion:relative;
-    width:100%;
-    background: #1c0522;
-    overflow:hidden;
-}
-.magicwave .wave {
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:100px;
-    background: url(../img/wavy.png);
-    background-size: 1000px 100px;
-}
-.magicwave .wave.waver1 {
-    z-index:100;
-    opacity:1;
-    animation-delay:0s;
-    bottom:0;
-    animation: animate1 30s linear infinite;
-}
-.magicwave .wave.waver1 {
-    z-index:99;
-    opacity:0.5;
-    animation-delay:-5s;
-    bottom:10;
-    animation: animate2 15s linear infinite;
-}
-@keyframes animate1 {
-    0% {
-      background-position-x: 0%;
-    }
-    100% {
-      background-position: 1000px;
-    }
-}
-@keyframes animate2 {
-    0% {
-      background-position-x: 0%;
-    }
-    100% {
-      background-position: 1000px;
-    }
-}
     /* reponsive */
 @media only screen and (max-width:281px) and (min-width:279px) {
     .invisible-circle {
