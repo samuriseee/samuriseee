@@ -430,7 +430,7 @@ ul li a {
     transform: scale(1);
 }
     /* reponsive */
-@media only screen and (max-width:281px) and (min-width:279px) {
+@media only screen and (max-width:300px) {
     .invisible-circle {
         display: none;
     }
@@ -525,7 +525,7 @@ ul li a {
     }
 }
 
-@media (max-width: 360px) and (min-width:285px) {
+@media (max-width: 360px) and (min-width:301px) {
     .invisible-circle {
         display: none;
     }
