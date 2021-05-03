@@ -39,7 +39,6 @@ header ul {
 header ul li {
     list-style: none;
     margin-left:14px;
-    
 }
 header ul li a {
     text-decoration: none;
@@ -430,14 +429,53 @@ ul li a {
     transition: 0.5s;
     transform: scale(1);
 }
-    /* reponsive */
-@media (max-width: 360px) {
-
+.magicwave {
+    postion:relative;
+    width:100%;
+    background: #1c0522;
+    overflow:hidden;
 }
-@media (max-width: 414px) {
-    body {
-        background-image: url(../img/—Pngtree—retro\ futuristic\ 1980s\ style\ mountain_1157047.png)
+.magicwave .wave {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100px;
+    background: url(../img/wavy.png);
+    background-size: 1000px 100px;
+}
+.magicwave .wave.waver1 {
+    z-index:100;
+    opacity:1;
+    animation-delay:0s;
+    bottom:0;
+    animation: animate1 30s linear infinite;
+}
+.magicwave .wave.waver1 {
+    z-index:99;
+    opacity:0.5;
+    animation-delay:-5s;
+    bottom:10;
+    animation: animate2 15s linear infinite;
+}
+@keyframes animate1 {
+    0% {
+      background-position-x: 0%;
     }
+    100% {
+      background-position: 1000px;
+    }
+}
+@keyframes animate2 {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position: 1000px;
+    }
+}
+    /* reponsive */
+@media only screen and (max-width:281px) and (min-width:279px) {
     .invisible-circle {
         display: none;
     }
@@ -448,28 +486,25 @@ ul li a {
         display:block;
     }
     header {
-        padding:30px 50px;
+        padding:30px 0px;
+        justify-content: space-evenly;
     }
-    header ul {
-        display:block;
+    header ul li{
+        margin-left:2px;
     }
     header ul li a {
-        font-size:20px;
+        font-size:8px;
     }
     header .logo {
-        font-size:50px;
-    }
-    #stars {
         display:none;
     }
-    #moon {
-        display:none;
+    .sec {
+        justify-content: center;
     }
-    #mountain_behind {
-        display:none;
-    }
-    #mountain_front {
-        display:none;
+    .sec h2 {
+        font-size:30px;
+        margin-left:-2px;
+        text-align: center;
     }
     #btn {
         display:none;
@@ -479,27 +514,232 @@ ul li a {
     }
     .about {
         justify-content: center;
-        width:100%;
     }
     .about .avatar,.about .summary,.about .contact {
-        width:100%;
+        width:253%;
         text-align: left;
         justify-content: center;
-        margin-bottom:10px;
+        margin-left:-55px;
+        margin-bottom:15px;
+    }
+    .about .summary p {
+        font-size:12px;
+        
+    }
+    .about .contact i a{
+        font-size:15px;
+    }
+    .about .contact i {
+        display:block;
+        text-align: center;
+        justify-content: center;
     }
     .skills .border-1,.skills .border-2,.skills .border-3 {
-        width:100%;
+        width:253%;
         text-align: left;
         justify-content: center;
+        margin-left:-55px;
         margin-bottom:15px;
     }
     .ff1,.ff2,.ff3,.ff4{
-        width:100%;
+        width:253%;
+        text-align: center;
+        justify-content: center;
+        margin-left:-55px;
+        margin-bottom:20px;
+        font-size:15px;
+    }
+    .ff1 i,.ff2 i ,.ff3 i,.ff4 i {
+        font-size:90px;
+    }
+    .edutext1 {
+        display:none;
+    }
+    .edutext2 {
+        display:block;
+        margin-left:-20px;
+    }
+    .education,.education .edu2,.education .edu1 {
+        width: 158%;
+        justify-content: center;
+        text-align: center;
+        margin-left: -25.5%;
+    }  
+    .education .edu2 h3,.education .edu1 h3 {
+        font-size:20px;
+    }
+}
+
+@media (max-width: 360px) and (min-width:285px) {
+    .invisible-circle {
+        display: none;
+    }
+    .circleK {
+        display:none;
+    }
+    .about,.ff,.skills {
+        display:block;
+    }
+    header {
+        padding:30px 0px;
+        justify-content: space-evenly;
+    }
+    header ul li{
+        margin-left:3px;
+    }
+    header ul li a {
+        font-size:10px;
+    }
+    header .logo {
+        display:none;
+    }
+    .sec {
+        justify-content: center;
+    }
+    .sec h2 {
+        font-size:40px;
+        margin-left:-2px;
+        text-align: center;
+    }
+    #btn {
+        display:none;
+    }
+    #text {
+        display: none;
+    }
+    .about {
+        justify-content: center;
+    
+    }
+    .about .avatar,.about .summary,.about .contact {
+        width:165%;
+        text-align: left;
+        justify-content: center;
+        margin-left:-40px;
+        margin-bottom:15px;
+    }
+    .about .summary p {
+        font-size:12px;
+        
+    }
+    .about .contact i a{
+        font-size:15px;
+    }
+    .about .contact i {
+        display:block;
+        text-align: center;
+        justify-content: center;
+    }
+    .skills .border-1,.skills .border-2,.skills .border-3 {
+        width:165%;
+        text-align: left;
+        justify-content: center;
+        margin-left:-40px;
+        margin-bottom:15px;
+    }
+    .ff1,.ff2,.ff3,.ff4{
+        width:165%;
         text-align: center;
         justify-content: center;
         margin-bottom:20px;
+        margin-left:-40px;
+        font-size:15px;
+    }
+    .ff1 i,.ff2 i ,.ff3 i,.ff4 i {
+        font-size:90px;
+    }
+    .edutext1 {
+        display:none;
+    }
+    .edutext2 {
+        display:block;
+        margin-left:-20px;
+    }
+    .education,.education .edu2,.education .edu1 {
+        width: 127%;
+        justify-content: center;
+        text-align: center;
+        margin-left: -10.5%;
+    }  
+    .education .edu2 h3,.education .edu1 h3 {
         font-size:20px;
     }
+}
+@media only screen and (max-width: 414px) and (min-width: 361px) {
+    .invisible-circle {
+        display: none;
+    }
+    .circleK {
+        display:none;
+    }
+    .about,.ff,.skills {
+        display:block;
+    }
+    header {
+        padding:30px 0px;
+        justify-content: space-evenly;
+    }
+    header ul li{
+        margin-left:6px;
+    }
+    header ul li a {
+        font-size:13px;
+    }
+    header .logo {
+        display:none;
+    }
+    .sec {
+        justify-content: center;
+    }
+    .sec h2 {
+        font-size:40px;
+        margin-left:-2px;
+        text-align: center;
+    }
+    #btn {
+        display:none;
+    }
+    #text {
+        display: none;
+    }
+    .about {
+        justify-content: center;
+    
+    }
+    .about .avatar,.about .summary,.about .contact {
+        width:130%;
+        text-align: left;
+        justify-content: center;
+        margin-left:-11%;
+        margin-bottom:15px;
+    }
+    .about .contact i a{
+        font-size:15px;
+    }
+    .about .contact i {
+        display:block;
+        text-align: center;
+        justify-content: center;
+    }
+    .skills .border-1,.skills .border-2,.skills .border-3 {
+        width:130%;
+        text-align: left;
+        justify-content: center;
+        margin-left:-11%;
+        margin-bottom:15px;
+    }
+    .ff1,.ff2,.ff3,.ff4{
+        width:130%;
+        text-align: center;
+        justify-content: center;
+        margin-bottom:20px;
+        font-size:15px;
+        margin-left:-11%;
+    }
+    .ff1 i,.ff2 i ,.ff3 i,.ff4 i {
+        font-size:120px;
+    }
+    
     .edutext1 {
         display:none;
     }
@@ -507,15 +747,16 @@ ul li a {
         display:block;
     }
     .education,.education .edu2,.education .edu1 {
-        width: 100%;
+        width: 110%;
         justify-content: center;
+        margin-left:-3%;
         text-align: center;
     }  
-}
-@media (max-width: 576px){
-    body {
-        background-image: url(../img/—Pngtree—retro\ futuristic\ 1980s\ style\ mountain_1157047.png)
+    .education .edu2 h3,.education .edu1 h3 {
+        font-size:20px;
     }
+}
+@media only screen and (max-width: 576px) and (min-width:415px){
     .invisible-circle {
         display: none;
     }
@@ -528,27 +769,11 @@ ul li a {
     header {
         padding:30px 50px;
     }
-    header ul {
-        display:block;
-        
-    }
+    
     header ul li a {
-        font-size:12px;
-        
+        font-size:13px;
     }
     header .logo {
-        font-size:30px;
-    }
-    #stars {
-        display:none;
-    }
-    #moon {
-        display:none;
-    }
-    #mountain_behind {
-        display:none;
-    }
-    #mountain_front {
         display:none;
     }
     #btn {
@@ -568,14 +793,10 @@ ul li a {
         margin-bottom:10px;
         font-size:15px;
     }
-    .about .contact {
-        width:100%;
-    }
-    .about .summary p {
-        font-size:12px;
-    }
-    .about .contact ul li i a {
-        font-size:12px;
+    
+    .about .contact ul li i{
+        display:block;
+        text-align: center;
     }
     .skills .border-1,.skills .border-2,.skills .border-3 {
         width:89%;
@@ -598,7 +819,7 @@ ul li a {
         font-size: 15px;
     }
     .ff1 i,.ff2 i ,.ff3 i,.ff4 i {
-        font-size:40px;
+        font-size:130px;
     }
     .edutext1 {
         display:none;
@@ -619,35 +840,20 @@ ul li a {
         font-size:17px;
     }
 }
-@media (max-width: 768px) {
-    body {
-        background-image: url(../img/—Pngtree—retro\ futuristic\ 1980s\ style\ mountain_1157047.png)
-    }
+@media only screen and (max-width: 769px) and (min-width:577px) {
     header {
         padding:30px 64px;
     }
-    #stars {
-        display:none;
+    header ul li a {
+        font-size:16px;
     }
-    #moon {
-        display:none;
+    header .logo {
+        font-size:40px;
     }
-    #mountain_behind {
-        display:none;
-    }
-    #mountain_front {
+    #text {
         display:none;
     }
     #btn {
-        display:none;
-    }
-    #text {
-        display: none;
-    }
-    .invisible-circle {
-        display: none;
-    }
-    .circleK {
         display:none;
     }
     .about,.skills {
@@ -666,8 +872,11 @@ ul li a {
         justify-content: center;
         margin-bottom:15px;
     }
+    .invisible-circle {
+        display:none;
+    }
 }
-@media (max-width: 1024px) { 
+@media only screen and (max-width: 1024px) and (min-width: 770px){ 
     #btn {
         display:none;
     }
@@ -676,24 +885,19 @@ ul li a {
     }
     .invisible-circle {
         margin-left:-7%;
-        margin-top:21%;
-    }
-    .about .contact {
-        width:43%
-    }
-
+        margin-top:22.3%;
     }
 @media (min-width: 1500px) {
     #text {
         right:-455px;
     }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1600px) {
     header .logo {
         font-size:50px;
     }
     header ul li a {
-        font-size: 25px;
+        font-size: 30px;
     }
     .skills .border-1 ul li,.skills .border-2 ul li,.skills .border-3 ul li {
         font-size:24px;
