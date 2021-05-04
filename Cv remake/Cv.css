@@ -385,7 +385,7 @@ ul li a {
 }
 .funfact .card:hover .face.face1 {
     position: absolute;
-    transform: translateY(100%) rotateX(90deg);
+    transform: translateY(-50%) rotateX(90deg);
     background: #1c0522;
 }
 .funfact .card .face.face2 {
@@ -395,7 +395,7 @@ ul li a {
     align-items: center;
     padding:20px;
     transform-origin: top;
-    transform: translateY(-100%) rotateX(90deg);
+    transform: translateY(50%) rotateX(90deg);
 }
 .funfact .card .face.face2 h3 {
     color:#fff;
@@ -440,6 +440,9 @@ ul li a {
         margin-left:-2px;
         text-align: center;
     }
+    .oddpro {
+        font-size:15px;
+    }
     #btn {
         display:none;
     }
@@ -475,16 +478,17 @@ ul li a {
         margin-left:-55px;
         margin-bottom:15px;
     }
-    .ff1,.ff2,.ff3,.ff4{
-        width:253%;
-        text-align: center;
-        justify-content: center;
-        margin-left:-55px;
-        margin-bottom:20px;
-        font-size:15px;
+    .funfact {
+        display:block;
+        align-items: center;
+        margin-left:-70px;
     }
-    .ff1 i,.ff2 i ,.ff3 i,.ff4 i {
-        font-size:90px;
+    .funfact .card {
+        width:200px;
+        margin-bottom:20px;
+    }
+    .funfact .card .content h3 {
+        font-size:14px;
     }
     .edutext1 {
         display:none;
@@ -670,16 +674,17 @@ ul li a {
         margin-left:-11%;
         margin-bottom:15px;
     }
-    .ff1,.ff2,.ff3,.ff4{
-        width:130%;
-        text-align: center;
-        justify-content: center;
-        margin-bottom:20px;
-        font-size:15px;
-        margin-left:-11%;
+    .funfact {
+        display:block;
+        align-items: center;
+        margin-left:-20%;
     }
-    .ff1 i,.ff2 i ,.ff3 i,.ff4 i {
-        font-size:120px;
+    .funfact .card {
+        width:120%;
+        margin-bottom:20px;
+    }
+    .funfact .card .content h3 {
+        font-size:14px;
     }
     
     .edutext1 {
