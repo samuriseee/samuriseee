@@ -1,0 +1,40 @@
+$main-color: #fff;
+$primary-color: #2b1055;
+$invisible-color:#1c0522;
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
+    overflow-x: hidden;
+}
+@import "./header";
+@import "./background";
+.sec {
+    position: relative;
+    padding:100px;
+    background: $invisible-color;
+    h2 {
+        font-size:3.5em;
+        margin-bottom: 10px;
+        color: $main-color;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 20px;
+        justify-content: center;
+    }
+    p {
+        font-size: 1em;
+        color:$main-color;
+    }
+}

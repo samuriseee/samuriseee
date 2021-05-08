@@ -21,14 +21,12 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 15;
-    
 }
 header .logo {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
     font-size:30px;
-    
     letter-spacing: 2px;
 }
 header ul {
@@ -134,7 +132,6 @@ section img#mountain_front {
     justify-content: center;
     opacity: 0.5;
 }
-
 .sec p {
     font-size: 1em;
     color:#fff;
@@ -856,7 +853,7 @@ ul li a {
         font-size:16px;
     }
     header .logo {
-        font-size:40px;
+        font-size:25px;
     }
     #text {
         display:none;

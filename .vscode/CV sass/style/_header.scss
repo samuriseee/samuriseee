@@ -1,0 +1,34 @@
+header {
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    padding:30px 100px;
+    z-index: 15;
+    @include flexCenter();
+    justify-content: space-between;
+    .logo {
+        color: $main-color;
+        font-weight: 700;
+        text-decoration: none;
+        font-size:30px;
+        letter-spacing: 2px;
+    }
+    ul {
+        @include flexCenter();
+        li {
+            list-style: none;
+            margin-left:14px;
+            a {
+                text-decoration: none;
+                padding: 6px 15px;
+                color: $main-color;
+                border-radius:20px;
+                &:hover,&:active {
+                    background: $main-color;
+                    color:$primary-color;
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-let stars = document.getElementById('stars');
+        let stars = document.getElementById('stars');
         let moon = document.getElementById('moon');
         let mountain_beind = document.getElementById('mountain_behind');
         let text = document.getElementById('text');
