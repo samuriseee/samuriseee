@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    justify-content: center;
+    display:flex;
+    background: burlywood;
+    
+}
+.container {
+    background: #fff;
+    width:50%;
+    margin-top:20px;
+}
+.item {
+    width:96%;
+    padding:10px;
+}
+.item .item1 {
+    display: flex;
+}
+.item .item1 p {
+    margin-top:-2px;
+    padding-left:10px;
+    text-align: left;
+}
+h4 {
+    
+    margin-bottom:-0.5px;
+    padding: 7px 7px 7px 0px;
+    text-align: left;
+    border-top: 1px dashed grey;
+}
+.item img {
+    width:30%;
+    height:15%;
+    object-fit: cover;
+}

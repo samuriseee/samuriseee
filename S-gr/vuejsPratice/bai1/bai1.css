@@ -1,0 +1,30 @@
+.container {
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    display:flex;
+}
+.container .app ul {
+    background:burlywood;
+    cursor: pointer;
+    display:inline-flex;
+    padding:5px;
+    margin-left:5px;
+    font-size:1.5rem;
+    color:#fff;
+}
+.container .app p {
+    text-align: center;
+    font-size:2.5rem;
+    opacity:0.7;
+}
+.container .app span {
+    width:150px;
+    height:150px;
+    padding:10px;
+    display:inline;
+    border: 1px solid black;
+    background: burlywood;
+    color:#fff;
+    opacity:0.5;
+}

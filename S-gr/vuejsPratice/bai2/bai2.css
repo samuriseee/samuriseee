@@ -1,0 +1,58 @@
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container {
+    width:40%;
+    height:400px;
+    background: #61A1BC;
+    margin: 0 auto;
+}
+.container h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top:10px;
+    color:#fff;
+}
+.container #app ul {
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.container #app ul li {
+    width:80%;
+    height:calc(250px/6);
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: -37px;
+    margin-bottom: 5px;
+    
+}
+.container #app ul li .itemName {
+    font-size:20px;
+    font-weight:bold;
+    color:#fff;
+    
+    text-transform: uppercase;
+}
+.container #app ul li .itemPrice {
+    font-size:20px;
+    font-weight:bold;
+    color:#fff;
+    text-transform: uppercase;
+}
+.container #app .total {
+    width: 78%;
+    display:flex;
+    justify-content: space-between;
+    color:#fff;
+    font-size:20px;
+    border-top:1px solid #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto;
+}

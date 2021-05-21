@@ -1,0 +1,57 @@
+body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container .nav {
+    justify-content: flex-end;
+    background: #4987a1;
+    display:flex;
+    padding:7px;
+}
+.container .nav button {
+    border:none;
+    color:#fff;
+    padding:10px;
+    margin-right:10px;
+}
+.container .nav button i {
+    font-size:15px;
+}
+.container .grid {
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+.container ul {
+    list-style: none;
+}
+.container .grid li a img {
+    width: 93%;
+    height: 90%;
+    object-fit: cover;
+}
+.container .grid p {
+    display:none;
+}
+
+/* list layout */
+.container .list li a img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    padding:10px;
+}
+.container .list {
+    display:flex;
+    flex-direction: column;
+}
+.container .list li {
+    display:flex;
+}
+.container .list li p {
+    font-size: 25px;
+    color:gray;
+    padding-left:10px;
+    font-weight: bold;
+    
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bai2.css">
+</head>
+<body>
+    <div class="container">
+        <div id="app">
+            <h1> services </h1>
+            <ul>
+                <li v-for="item in list"
+                    @click="pickItem(item)"
+                    v-bind:style="{
+                        background: item.choosen? '#8EC16D':'#E35885'
+                    }"
+                > 
+                    <span class="itemName"> {{item.name}} </span>
+                    <span class="itemPrice"> ${{item.price}}</span>
+                </li>
+            </ul>
+            
+            <div class="total"> total: <span> ${{total()}} </span> </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./bai2.js"> </script>
+</body>
+</html>

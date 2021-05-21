@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bai3.css">
+</head>
+<body>
+    <div class="container">
+
+            <div class="nav">
+                <button class="gridLayout" 
+                    v-bind:class="{active: grid}"
+                    v-bind:style="{
+                        backgroundColor: gridLayout? '#c14994':'#4987a1'
+                    }"
+                    v-on:click="changeLayout()"> <i class="fas fa-th-large"></i>
+                </button>
+                <button class="listLayout" 
+                    v-bind:class="{active: list}"
+                    v-bind:style="{
+                        backgroundColor: listLayout? '#c14994':'#4987a1'
+                    }"
+                    v-on:click="changeLayout()"> <i class="fas fa-list"></i>
+                </button>
+            </div>
+            
+            <!-- switchable layout -->
+            <ul  v-bind:class="{grid: gridLayout, list: listLayout}"> 
+                <li v-for="item in articles"> 
+                    <a v-bind:href="item.url">
+                        <img v-bind:src="item.image.large">
+                    </a>
+                    <p>{{item.title}}</p>
+                </li>
+            </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./bai3.js"></script>
+</body>
+</html>
