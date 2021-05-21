@@ -5,7 +5,7 @@ new Vue ({
         menu: [
             {
                 name:'HOME',
-                choosen:true,
+                choosen:false,
             },
 
             {
