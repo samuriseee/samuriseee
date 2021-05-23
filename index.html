@@ -4,110 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./S-gr/first vuejs/todolist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        <div class="container">
-            <h1>To Do List</h1>
-            <div v-if="!isEditing"> 
-                    <input type="text" v-model="todo">
-                    <input type="submit" value="add" v-on:click="storeTodo">
-            </div>
+    <div class="container">
+        <h1>To Do List</h1>
+            <div id="app">
+                <div v-if="!isEditing"> 
+                        <input type="text" v-model="newTodo" @keyup.enter="storeTodo"
+                                placeholder="What need to be done?" 
+                                
+                        >
+                        <input type="submit" value="+" @click="storeTodo">
+                </div>
 
-            <div v-else> 
-                    <input type="text" v-model="todo">
-                    <input type="submit" value="update" v-on:click="updateTodo">
+                <div v-else> 
+                        <input type="text" v-model="newTodo" @keyup.enter="updateTodo"
+                                placeholder="Editing your task here"
+                        >
+                        <input type="submit" value="↻" @click="updateTodo">
+                </div>
+                
+                <ol>
+                    <li v-for="(todo,index) in todos" :class="{ completed : todo.completed }">
+                        <input type="checkbox" v-model="todo.completed" class="checkbox">
+                                {{ todo.name }}  
+                    <div> 
+                        <button v-on:click="editTodo(index,todo)"><i class="far fa-edit"></i>
+                        </button>     
+                        <button v-on:click="deleteTodo(index)"><i class="far fa-trash-alt"></i>
+                        </button> 
+                    </div>
+                    </li>
+                </ol>
+                <div class="clearButton"> 
+                    <button v-on:click="clearCompleted"> Clear Completed </button>
+                    <button v-on:click="clearAll"> Clear All Tasks</button>
+                </div>
+
+                <div class="pending"> 
+                        Pending Tasks: {{ remaining }}
+                </div>
             </div>
-            
-            <ol>
-                 
-                <li v-for="(todo,index) in todos">
-                    {{ todo.name }}    
-                    <button v-on:click="editTodo(index,todo)">edit</button>     
-                    <button v-on:click="deleteTodo(index)">delete</button> 
-                </li>
-            </ol>
-            <button v-on:click="clearCompleted"> Clear completed </button>
-            <button v-on:click="clearAll"> Clear All </button>
-            <div> 
-                Pending Tasks: {{ inComplete }}
-            </div>
-        </div>
+                <div class="footer">
+                    <div class="wave"></div>
+                </div>
     </div>
-    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script>
-        new Vue ({
-        el : '#app',
-        data :{
-            isEditing: false,
-            sedlectedIndex: null,
-            todo: '',
-            todos: [
-                {
-                    name:'sleep',
-                    completed: true,
-                },
-
-                {
-                    
-                    name:'eat',
-                    completed: true,
-                },
-        
-                {
-                    
-                    name:'reach challenger',
-                    completed: false,
-                },
-
-                {
-                    
-                    name:'do exercise',
-                    completed: true,
-                },
-            ],
-        },
-
-        methods: {
-            storeTodo() {
-                this.todos.push(this.todo)
-                this.todo=''
-            },
-
-            editTodo(index,todo) {
-                this.todo = todo.name
-                this.selectedIndex = index
-                this.isEditing = true
-            },
-
-            updateTodo() {
-                this.todos.splice(this.sedlectedIndex,1,this.todo)
-                this.isEditing = false
-                this.todo=''
-            },
-
-            deleteTodo(index) {
-                this.todos.splice(index,1)
-                this.todo=''
-            },
-
-            inProgress(todo) {
-                return !this.isCompleted(todo)
-            },
-            isCompleted(todo) {
-                return todo.completed
-            },
-            clearCompleted() {
-                this.todos = this.todos.filter(this.inProgress)
-            },
-            clearAll() {
-                this.todos=[]
-            },
-            
-        }
-    })
-    </script>
+    <script src="./S-gr/first vuejs/todolist.js"></script>
 </body>
 </html>

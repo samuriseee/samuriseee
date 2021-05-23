@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.completed {
+    text-decoration: line-through;
+    color:grey;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    
+    background: url(../../img/jungle.jpg) 
+    no-repeat 
+    center center/cover;
+}
+.container h1 {
+    text-align: center;
+    color:rgb(143, 142, 142);
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size:2.5rem;
+}
+#app {
+    width:30%;
+    border:1px;
+    display:flex;
+    flex-direction: column;
+    background: #fff;
+    align-items: center;
+    margin: 0 auto;
+    padding:10px;
+    border-radius:7px;
+}
+.container #app input[type=text] {
+    width:78%;
+    padding:8px;
+    font-size:17px;
+    border:1px;
+    background:#f4f3f4;
+    border-radius:7px;
+    margin-left:-10px;
+}
+.container #app input[type=submit] {
+    width:15%;
+    padding:9.5px;
+    background:#47749e;
+    color:#fff;
+    font-size:15.5px;
+    border-radius:7px;
+    border:1px;
+}
+.container #app ol {
+    list-style: none;
+    width:90%;
+    margin-left: -40px;
+}
+.container #app ol li {
+    display:flex;
+    justify-content: space-between ;
+    margin-bottom: 7px;
+    
+}
+
+.container #app ol li input[type=checkbox] {
+    width:20px;
+    height:20px; 
+    border-radius:20px;
+    color: lightgrey;
+}
+.container #app ol li button {
+    border: 1px;
+    padding:7px;
+    color: #fff;
+    background: #47749e;
+    border-radius:7px;
+    font-size:12px;
+    text-align: center;
+    text-decoration: none;
+}
+.container #app .clearButton {
+    width:97%;
+    display:flex;
+    justify-content: space-evenly;
+}
+.container #app .clearButton button {
+    width:45%;
+    border: 1px;
+    padding:10px;
+    color: #fff;
+    background: #47749e;
+    border-radius:7px;
+}
+.container #app .pending {
+    width:90%;
+    text-align: left;
+    padding:7px;
+}
+.footer .wave {
+    width: 100%;
+    height: 227px;
+    top:0px;
+    left: 0px;
+    background: url(../../img/wave-large.png);
+    animation: move 10s linear infinite;
+}
+  
+.footer .wave::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 227px;
+    margin-bottom: 0;
+    left: 0;
+    background: url(../../img/wave-large.png);
+    opacity: 0.4;
+    animation: move-reversed 10s linear infinite;
+}
+
+.footer .wave::after {
+    content: '';
+    width: 100%;
+    height: 227px;
+    bottom: 0;
+    left: 0;
+    background: url(../../img/wave-large.png);
+    opacity: 0.5;
+    animation-delay: -4s;
+    animation: move 10s linear infinite;
+}
+@keyframes move {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 1920px;
+    }
+}
+
+@keyframes move-reversed {
+    0% {
+      background-position: 1920px;
+    }
+    100% {
+      background-position: 0%;
+    }
+}
