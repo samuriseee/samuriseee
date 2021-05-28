@@ -40,8 +40,9 @@ new Vue ({
 
     methods: {
         storeTodo() {
-            if(this.newTodo =='' || this.newTodo == ' ') {
-                alert('input something, please!!')
+            let value = this.newTodo && this.newTodo.trim();
+            if(!value) {
+                alert('oops, some issue just occurred!!!')
             } else {
             this.todos.push({
                 id: this.idForNewTodo,
@@ -60,7 +61,10 @@ new Vue ({
         },
 
         updateTodo() {
-            this.todos.splice(this.selectedIndex, 1, this.todo, this.todo.completed = false)
+                this.todos[this.selectedIndex]={
+                    name: this.newTodo,
+                    completed:false,
+                }
             this.isEditing = false
             this.newTodo=''
         },

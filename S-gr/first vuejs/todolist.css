@@ -50,6 +50,7 @@ body {
     font-size:15.5px;
     border-radius:7px;
     border:1px;
+    cursor: pointer;
 }
 .container #app ol {
     list-style: none;
@@ -68,6 +69,7 @@ body {
     height:20px; 
     border-radius:20px;
     color: lightgrey;
+    cursor: pointer;
 }
 .container #app ol li button {
     border: 1px;
@@ -78,6 +80,7 @@ body {
     font-size:12px;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 }
 .container #app .clearButton {
     width:97%;
@@ -91,6 +94,7 @@ body {
     color: #fff;
     background: #47749e;
     border-radius:7px;
+    cursor: pointer;
 }
 .container #app .pending {
     width:90%;
