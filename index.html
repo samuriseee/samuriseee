@@ -14,17 +14,17 @@
         <h1>To Do List</h1>
             <div id="app">
                 <div v-if="!isEditing"> 
-                        <input type="text" v-model="newTodo" @keyup.enter="storeTodo"
-                                placeholder="What need to be done?" 
-                                
-                        >
+                        <input type="text" v-model="newTodo" 
+                                @keyup.enter="storeTodo"
+                                placeholder="What need to be done?">
                         <input type="submit" value="+" @click="storeTodo">
                 </div>
 
                 <div v-else> 
-                        <input type="text" v-model="newTodo" @keyup.enter="updateTodo"
-                        >
-                        <input type="submit" value="↻" @click="updateTodo">
+                        <input type="text" v-model="newTodo" 
+                        @keyup.enter="updateTodo">
+                        <input type="submit" value="↻" 
+                        @click="updateTodo">
                 </div>
                 
                 <ol>
@@ -32,9 +32,11 @@
                         <input type="checkbox" v-model="todo.completed" class="checkbox">
                                 {{ todo.name }}  
                     <div> 
-                        <button v-on:click="editTodo(index,todo)"><i class="far fa-edit"></i>
+                        <button v-on:click="editTodo(index,todo)">
+                            <i class="far fa-edit"></i>
                         </button>     
-                        <button v-on:click="deleteTodo(index)"><i class="far fa-trash-alt"></i>
+                        <button v-on:click="deleteTodo(index)">
+                            <i class="far fa-trash-alt"></i>
                         </button> 
                     </div>
                     </li>
