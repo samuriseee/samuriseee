@@ -70,6 +70,7 @@ export default {
 <style>
 .blogs {
     width:100%;
+    margin-top:12px;
 }
 .blogs img {
     width:200px;
@@ -86,10 +87,16 @@ export default {
     text-align: left;
     width:80%;
     padding: 0px 10px;
-    color:#fff;
+    color:rgb(255, 245, 245);
+    font-size:18px;
+}
+.blogs .modelData .text span {
+    font-size:17px;
+    opacity: 0.7;
 }
 .blogs .modelData .text h3 {
-    font-size:1.5rem;
+    margin-top:-10px;
+    font-size:2rem;
     color:#fff;
 }
 </style>

@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
       <div class="navBar"> 
-        <button @click="activeNav = 'home'"> Home </button>
+        <button @click="activeNav = 'home'" :class="{}"> Home </button>
         <button @click="activeNav = 'contact'"> contact </button>
         <button @click="activeNav = 'blogs'"> blogs </button>
       </div>
@@ -10,6 +10,9 @@
       <contact v-if="activeNav === 'contact'"/> 
       <blogs v-if="activeNav === 'blogs'"/>
     </div>
+    <div class="footer">
+                    <div class="wave"></div>
+                </div>
   </div>
 </template>
 
@@ -58,16 +61,70 @@ body {
     justify-content: center;
 }
 .container .navBar button{
-    border: 1px;
+    border: none;
+    outline: none;
     padding:10px;
     margin-left:5px;
-    color: #fff;
-    background: #47749e;
+    color: #292734;
+    background: #fbfaff;
     border-radius:7px;
     font-size: 20px;
     text-align: center;
-    text-decoration: none;
     cursor: pointer;
     text-transform: uppercase;
+    box-shadow: 
+    0 0.7px 4px rgb(0,0,0,0.045),
+    0 1.9px 11.1px rgba(0,0,0,0.065),
+    0 4.5px 26.8px rgba(0,0,0,0.085),
+    0 15px 89px rgba(0,0,0,0.013);
+}
+.footer .wave {
+    width: 100%;
+    height: 227px;
+    top:0px;
+    left: 0px;
+    background: url(../../img/wave-large.png);
+    animation: move 10s linear infinite;
+}
+  
+.footer .wave::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 227px;
+    margin-bottom: 0;
+    left: 0;
+    background: url(../../img/wave-large.png);
+    opacity: 0.4;
+    animation: move-reversed 10s linear infinite;
+}
+
+.footer .wave::after {
+    content: '';
+    width: 100%;
+    height: 227px;
+    bottom: 0;
+    left: 0;
+    background: url(../../img/wave-large.png);
+    opacity: 0.5;
+    animation-delay: -4s;
+    animation: move 10s linear infinite;
+}
+@keyframes move {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 1920px;
+    }
+}
+
+@keyframes move-reversed {
+    0% {
+      background-position: 1920px;
+    }
+    100% {
+      background-position: 0%;
+    }
 }
 </style>

@@ -39,9 +39,6 @@
                         Pending Tasks: {{ remaining }}
                 </div>
             </div>
-                <div class="footer">
-                    <div class="wave"></div>
-                </div>
     </div>
 </template>
 
