@@ -2,8 +2,8 @@
 
 - 👀 I’m currently a frontend developer with a keen eyes for website interface
 - 👌 I’m proud of myself for having some useful softskills such as presentation and communicate between teammates, english, ...
-- 🤯 I’m currently learning about more about some frontend framework (vueJS, ReactJs) 
-- 😽 My dream is become a senior fullstack web developer before im reach 25
+- 🤯 I’m currently learning more about some frontend framework (VueJS, ReactJs) 
+- 😽 My dream is become a senior full stack web developer before i reach 25
 
 
 ### :zap: GitHub Stats
