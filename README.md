@@ -1,4 +1,13 @@
-### Hi there 👋
+### Heluuu, I am Tuan Kiet
+- I’m currently a frontend developer with a keen eyes for website interface
+- I’m proud of myself for having some useful softskills such as presentation and communicate between teammates, english, ...
+- I’m currently learning about more about some frontend framework (vueJS, ReactJs) 
+- My dream is become a senior fullstack web developer before im reach 25
+
+
+Github Stat 
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=samuriseee)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=samuriseee&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 
 <!--
 **samuriseee/samuriseee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
